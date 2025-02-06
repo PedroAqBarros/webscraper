@@ -4,6 +4,8 @@ const puppeteer = require('puppeteer');
 
 const url = 'https://edge.skybox.gg/u/demos/personal'; // URL do site
 
+const fs = require('fs').promises; // Importe o módulo 'fs' para salvar o arquivo
+
 async function scrapeData() {
     try {
         const browser = await puppeteer.launch(); // Abre um navegador Chromium
@@ -21,16 +23,22 @@ async function scrapeData() {
 
         await page.waitForNavigation(); // **Espera a página recarregar/navegar após o login!**
 
+        const currentURL = page.url(); // **Pegar a URL atual**
+        console.log('URL após login:', currentURL); // **Imprimir a URL no console**
+
+
+        const content = await page.content(); // Obtém o HTML *renderizado* da página
+
+        // Salva o HTML renderizado *após* o login em um arquivo
+        await fs.writeFile('pagina_renderizada_pos_login.html', content);
+        console.log('HTML renderizado após login salvo em pagina_renderizada_pos_login.html');
+
 
         // Agora que estamos logados, espera a tabela de partidas carregar
         await page.waitForSelector('tbody tr.leading-8', { timeout: 60000 }); // Timeout aumentado para 60 segundos
 
-        const content = await page.content(); // Obtém o HTML *renderizado* da página
-        await browser.close(); // Fecha o navegador
 
-        // Salva o HTML renderizado em um arquivo (para debug - pode remover depois)
-        // await fs.writeFile('pagina_renderizada_pos_login.html', content);
-        // console.log('HTML renderizado após login salvo em pagina_renderizada_pos_login.html');
+        await browser.close(); // Fecha o navegador
 
 
         const $ = cheerio.load(content);
