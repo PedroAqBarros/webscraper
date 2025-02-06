@@ -12,32 +12,33 @@ async function scrapeData() {
         const page = await browser.newPage(); // Abre uma nova página no navegador
         await page.goto(url); // Navega até a URL da página de demos (que redireciona para login)
 
-        // **Login Steps - Adicionado agora!**
-        await page.waitForSelector('#email'); // Espera o campo de email aparecer
-        await page.type('#email', 'pkzinfps@gmail.com'); // Digita seu email
+        // **Login Skybox ID Steps**
+        await page.waitForSelector('#email', { timeout: 30000 });
+        await page.type('#email', 'pkzinfps@gmail.com');
+        await page.waitForSelector('#password', { timeout: 30000 });
+        await page.type('#password', 'R26WK!2rZKNBqtG');
+        await page.click('button[type="submit"]');
+        await page.waitForNavigation({ timeout: 30000 });
 
-        await page.waitForSelector('#password'); // Espera o campo de senha aparecer
-        await page.type('#password', 'R26WK!2rZKNBqtG'); // Digita sua senha
+        // **Verifica login Skybox ID bem-sucedido**
+        await page.waitForSelector('a[aria-current="page"] span.font-brand', { timeout: 30000 });
+        console.log('"Your Matches" encontrado! Login Skybox ID bem-sucedido.');
 
-        await page.click('button[type="submit"]'); // Clica no botão "Login with Skybox ID"
+        // **Connect Steam Account Steps - ADICIONADO AGORA!**
+        await page.waitForSelector('#steam', { timeout: 30000 }); // Espera o botão "Conectar com Steam"
+        await page.click('#steam'); // Clica no botão "Conectar com Steam"
 
-        await page.waitForNavigation(); // **Espera a página recarregar/navegar após o login!**
+        // **AGORA VEM A PARTE MAIS COMPLICADA: LIDAR COM A JANELA POPUP DO STEAM**
+        // ... (vamos adicionar o código para login no Steam no próximo passo) ...
 
-        const currentURL = page.url(); // **Pegar a URL atual**
-        console.log('URL após login:', currentURL); // **Imprimir a URL no console**
+
+        // Espera até que pelo menos uma linha de partida seja carregada na tabela
+        await page.waitForFunction(() => {
+            return document.querySelectorAll('tbody tr.leading-8').length > 0;
+        }, { timeout: 60000 }); // Timeout de 60 segundos (voltei para 60s)
 
 
         const content = await page.content(); // Obtém o HTML *renderizado* da página
-
-        // Salva o HTML renderizado *após* o login em um arquivo
-        await fs.writeFile('pagina_renderizada_pos_login.html', content);
-        console.log('HTML renderizado após login salvo em pagina_renderizada_pos_login.html');
-
-
-        // Agora que estamos logados, espera a tabela de partidas carregar
-        await page.waitForSelector('tbody tr.leading-8', { timeout: 60000 }); // Timeout aumentado para 60 segundos
-
-
         await browser.close(); // Fecha o navegador
 
 
