@@ -1,0 +1,575 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&amp;family=Oxanium:wght@400;500;600;700&amp;family=Roboto+Mono:wght@300&amp;display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skybox Edge</title>
+    <script type="module" crossorigin="" src="/assets/index-aJ1Cg3vz.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-aM8vikmV.css">
+  </head>
+  <body>
+    <div id="root"><div class="h-screen overflow-hidden"><div class="text-text relative flex h-full w-full flex-row items-start"><div class="absolute m-5 flex items-start"><img src="data:image/svg+xml,%3csvg%20width='374'%20height='120'%20viewBox='0%200%20374%20120'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4937_11453)'%3e%3cpath%20d='M294.7%2038.4C294.7%2038.3%20294.7%2038.3%20294.6%2038.3H229L211.7%2052.5L200.6%20104.8L211.8%20119H277.4L280.4%20104.9L284.8%2084.3L285.9%2078.9L288%2068.8H241.4C241.3%2068.8%20241.3%2068.8%20241.3%2068.9L237.3%2087.8C237.3%2087.9%20237.3%2087.9%20237.4%2087.9H263.7L261.2%2099.9H222.5C222.4%2099.9%20222.4%2099.9%20222.4%2099.8L231.3%2057.3C231.3%2057.2%20231.4%2057.2%20231.4%2057.2H290.6C290.7%2057.2%20290.7%2057.2%20290.7%2057.1L291.7%2052.6L294.7%2038.4Z'%20fill='%2325F4AA'/%3e%3cpath%20d='M129.1%2038.3C129%2038.3%20129%2038.3%20129%2038.4L125%2057.3L121.9%2071.9L112%20119C112%20119.1%20112%20119.1%20112%20119.1H112.1C112.2%20119.1%20135.5%20119.1%20175.1%20119.1L192.4%20104.9L203.5%2052.5L192.3%2038.3H129.1ZM172.2%20100.1H137.1C137.1%20100.1%20140.7%2082.9%20143%2072C144.2%2066.3%20146.1%2057.4%20146.1%2057.4H181.2C181.3%2057.4%20181.3%2057.4%20181.3%2057.5L172.4%20100C172.3%20100%20172.3%20100.1%20172.2%20100.1Z'%20fill='%2325F4AA'/%3e%3cpath%20d='M108.4%20100.1H58.8L61.3%2088.3H109.6C109.7%2088.3%20109.7%2088.3%20109.7%2088.2L113.7%2069.3C113.7%2069.2%20113.7%2069.2%20113.6%2069.2H65.4L67.9%2057.4H117.1C117.2%2057.4%20117.2%2057.4%20117.2%2057.3L121.2%2038.5C121.2%2038.4%20121.2%2038.4%20121.1%2038.4H51.1C51%2038.4%2051%2038.4%2051%2038.5L33.9%20119C33.9%20119.1%2033.9%20119.1%2034%20119.1H104.3C104.4%20119.1%20104.4%20119.1%20104.4%20119L108.4%20100.2C108.5%20100.1%20108.5%20100.1%20108.4%20100.1Z'%20fill='%2325F4AA'/%3e%3cpath%20d='M360.2%20100.1H310.7L313.2%2088.3H361.5C361.6%2088.3%20361.6%2088.3%20361.6%2088.2L365.6%2069.3C365.6%2069.2%20365.6%2069.2%20365.5%2069.2H317.2L319.7%2057.4H369C369.1%2057.4%20369.1%2057.4%20369.1%2057.3L373.1%2038.5C373.1%2038.4%20373.1%2038.4%20373%2038.4H303C302.9%2038.4%20302.9%2038.4%20302.9%2038.5L285.8%20119C285.8%20119.1%20285.8%20119.1%20285.9%20119.1H356.2C356.3%20119.1%20356.3%20119.1%20356.3%20119L360.3%20100.2C360.3%20100.1%20360.3%20100.1%20360.2%20100.1Z'%20fill='%2325F4AA'/%3e%3cpath%20d='M0.2%2031.2V23.9H20.4V19.4H6.7C1.8%2019.4%200%2017.3%200%2012.6V6.9C0%202.2%201.9%200%206.9%200H28.2V7.3H8.1V11.7H21.8C26.7%2011.7%2028.5%2013.8%2028.5%2018.5V24.2C28.5%2028.9%2026.7%2031%2021.8%2031L0.2%2031.2Z'%20fill='white'/%3e%3cpath%20d='M31.9%2031.2V0.1H39.9V12H42.5L52.3%200H62.1L49.5%2015.3L62.5%2031.2H52.1L42.8%2019.4H39.9V31.2H31.9Z'%20fill='white'/%3e%3cpath%20d='M76.1%2031.2V18.7L63.5%200H72.6L80%2011L87.1%200H96.1L84.3%2018.7V31.1L76.1%2031.2Z'%20fill='white'/%3e%3cpath%20d='M98.4%2031.2V0.100006H120.8C126%200.100006%20128%202.20001%20128%206.60001V10.3C128%2014.1%20125.5%2015.5%20121.1%2015.5V15.6C125.6%2015.6%20128.1%2016.9%20128.1%2020.8V24.5C128.1%2029%20126.4%2031.1%20121.5%2031.1L98.4%2031.2ZM106.5%2011.9H120V7.40001H106.5V11.9ZM106.5%2023.8H120V19.3H106.5V23.8Z'%20fill='white'/%3e%3cpath%20d='M138.2%2031.2C133.3%2031.2%20131.5%2029.1%20131.5%2024.4V6.8C131.5%202.1%20133.3%200%20138.2%200H155.3C160.2%200%20162%202.1%20162%206.8V24.3C162%2029%20160.2%2031.1%20155.3%2031.1L138.2%2031.2ZM153.9%2023.8V7.4H139.6V23.8H153.9Z'%20fill='white'/%3e%3cpath%20d='M163.2%2031.2L176%2015.3L163.3%200H173.3L181.3%209.7L189%200H198.9L186.5%2015.3L199.6%2031.2H189.1L181.2%2021.2L173%2031.2H163.2Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4937_11453'%3e%3crect%20width='373.1'%20height='119.1'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" class="h-11"></div><div class="flex h-full w-full flex-1 items-center justify-center bg-opacity-[0.2] bg-cover bg-right"><div class="flex h-full flex-1 flex-col items-center justify-center overflow-auto"><div class="bg-surface-base border-grey-300 rounded border px-10 py-5"><div class="flex w-[300px] flex-col gap-5 md:w-[426px]"><h1 class="mb-0 font-bold">Hello!<br>Welcome Back</h1><p class="text-grey-100">Great to see you again! Please sign in to continue and pick up right where you left off.</p><button id="steam" class="flex h-6 w-full items-center rounded border border-[#124B6A] bg-gradient-to-r from-[#111619] to-[#124B6A] p-5"><span class="flex w-full items-center justify-center gap-2"><img class="h-6" src="data:image/svg+xml,%3csvg%20width='19'%20height='18'%20viewBox='0%200%2019%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_935_308)'%3e%3cpath%20d='M0.891389%2011.5483C2.00045%2015.1992%205.43057%2017.8616%209.48954%2017.8616C14.4467%2017.8616%2018.4652%2013.8941%2018.4652%209.00003C18.4652%204.10597%2014.4467%200.138489%209.48954%200.138489C4.73299%200.138489%200.840621%203.79194%200.533203%208.41129C1.11494%209.37415%201.34074%209.96981%200.890828%2011.5483H0.891389Z'%20fill='white'/%3e%3cpath%20d='M9.02702%206.7805L9.02787%206.82426L6.83162%209.97426C6.47596%209.95819%206.11918%2010.0199%205.78035%2010.1576C5.63285%2010.2168%205.49202%2010.291%205.36017%2010.3791L0.537136%208.41656C0.537136%208.41656%200.425501%2010.2293%200.890554%2011.5801L4.3002%2012.9692C4.46849%2013.7246%204.99581%2014.387%205.77053%2014.7055C6.38002%2014.9555%207.06511%2014.9565%207.67532%2014.7082C8.28554%2014.4599%208.77099%2013.9826%209.02506%2013.3812C9.1606%2013.0609%209.22599%2012.7159%209.21692%2012.3688L12.3564%2010.152L12.4336%2010.1534C14.3143%2010.1534%2015.8429%208.63976%2015.8429%206.7805C15.8429%204.92124%2014.3171%203.41312%2012.4336%203.40924C10.5537%203.40924%209.02422%204.92124%209.02422%206.7805H9.02702ZM8.4997%2013.1636C8.09187%2014.1328%206.96654%2014.5889%205.98847%2014.1865C5.55444%2014.0064%205.20264%2013.6751%205.00002%2013.2555L6.10992%2013.7097C6.28138%2013.7801%206.46522%2013.8166%206.65094%2013.8168C6.83666%2013.8171%207.02061%2013.7813%207.1923%2013.7114C7.36398%2013.6414%207.52003%2013.5388%207.65152%2013.4093C7.78301%2013.2798%207.88737%2013.126%207.95864%2012.9567C8.10294%2012.6146%208.1038%2012.2299%207.96101%2011.8872C7.81822%2011.5444%207.54347%2011.2716%207.1971%2011.1287L6.04709%2010.6594C6.48971%2010.4932%206.99291%2010.4877%207.46357%2010.6807C7.9404%2010.8754%208.30504%2011.242%208.50026%2011.7108C8.69548%2012.1797%208.69436%2012.6967%208.49746%2013.1636M12.4367%209.02773C11.834%209.02612%2011.2566%208.78877%2010.8309%208.36766C10.4051%207.94656%2010.1658%207.37604%2010.1653%206.78106C10.1659%206.18617%2010.4053%205.61579%2010.831%205.1948C11.2568%204.77382%2011.8341%204.53654%2012.4367%204.53493C13.0393%204.5364%2013.6168%204.77361%2014.0426%205.19461C14.4685%205.61561%2014.708%206.18608%2014.7086%206.78106C14.7081%207.37613%2014.4687%207.94674%2014.0428%208.36786C13.617%208.78898%2013.0394%209.02627%2012.4367%209.02773ZM10.7346%206.77746C10.7343%206.33042%2010.9137%205.90152%2011.2335%205.58503C11.5533%205.26854%2011.9872%205.09034%2012.44%205.08961C13.3811%205.08961%2014.1465%205.84561%2014.1465%206.77746C14.1468%207.22459%2013.9671%207.65351%2013.6471%207.96991C13.3271%208.28632%2012.8929%208.46431%2012.44%208.46475C11.9873%208.46409%2011.5533%208.286%2011.2335%207.96962C10.9137%207.65324%2010.7344%207.22445%2010.7346%206.77746Z'%20fill='%23111619'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_935_308'%3e%3crect%20width='18.2319'%20height='18'%20fill='white'%20transform='translate(0.384766)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e">Sign in with Steam</span></button><div class="text-center">OR</div><div id="login-undefined"><form action="#" novalidate=""><div class="flex gap-4 flex-col"><div class="flex flex-wrap gap-4 flex-col"><div class="flex flex-col gap-1"><span class="flex gap-2 text-xs">Email</span><div class="relative flex items-center gap-1"><input name="email" class="placeholder:text-text-subdued my-1 px-2.5 box-border w-full border outline-none rounded invalid:border-input-border-danger invalid:hover:border-input-border-danger-hover disabled:text-text-disabled disabled:placeholder:text-text-disabled disabled:border-input-border-disabled disabled:hover:border-input-border-disabled bg-input border-input-border hover:border-input-border-hover py-2" id="email" type="text" placeholder="Enter your email" value=""></div></div><div class="flex flex-col gap-1"><span class="flex gap-2 text-xs">Password</span><div class="relative flex items-center gap-1"><input name="password" class="placeholder:text-text-subdued my-1 px-2.5 box-border w-full border outline-none rounded invalid:border-input-border-danger invalid:hover:border-input-border-danger-hover disabled:text-text-disabled disabled:placeholder:text-text-disabled disabled:border-input-border-disabled disabled:hover:border-input-border-disabled bg-input border-input-border hover:border-input-border-hover py-2" id="password" type="password" placeholder="Enter your password" value=""></div></div></div><div class="flex flex-wrap gap-4 flex-col"><button class="flex focus-visible:outline-none items-center justify-center leading-none rounded relative h-8 min-h-8 leading-8 px-3 text-sm gap-x-2  bg-primary hover:bg-primary-hover disabled:bg-action-primary/20 text-text-on-primary disabled:text-text-on-primary" type="submit">Login with Skybox ID</button></div></div></form><span class="text-xs"><a href="#" class="text-primary">Forgot password?</a></span></div><span class="text-sm flex gap-1 items-center justify-center">Don't have an account yet?<a href="/auth/register?redirect_uri=https%3A%2F%2Fedge.skybox.gg%2Fu%2Fdemos%2Fpersonal"><span class="text-primary font-bold">Sign up for free</span></a></span></div></div></div></div></div><div class="absolute bottom-0 left-0 w-full z-[200]"><div class="relative bg-secondary-500 text-text-on-primary" role="gdpr-privacy-banner"><div class="flex gap-4 items-center justify-center p-2"><svg aria-hidden="true" focusable="false" data-prefix="fass" data-icon="cookie" class="svg-inline--fa fa-cookie fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M362.2 37L213.9 16 81.7 86.7 16 222.1 42 370.4 149.8 475l148.3 21 132.3-70.7L496 289.9 470 141.6 362.2 37zM176 368l-32-32 32-32 32 32-32 32zm0-192l32-32 32 32-32 32-32-32zM368 336l-32-32 32-32 32 32-32 32z"></path></svg><span class="text-sm font-light">This website uses cookies to enhance the user experience.</span><button class="flex focus-visible:outline-none items-center justify-center leading-none rounded relative h-7 px-3.5 text-sm gap-x-2  bg-grey-400 hover:bg-surface-layer2 disabled:bg-surface-layer2 disabled:hover:bg-surface-layer3 text-text-action-basic disabled:text-text-subdued h-fit min-h-[28px]">Accept</button></div></div></div></div></div>
+    <div id="toasts"></div>
+  
+
+<script type="text/javascript" crossorigin="anonymous" src="https://d3golvu0vykca8.cloudfront.net/static/web-vitals.js?v=1.203.2"></script><script type="text/javascript" crossorigin="anonymous" src="https://d3golvu0vykca8.cloudfront.net/array/phc_a1XZODshoYz1EFCaWPOgsD7UuvF2mWylNGo4HfolcnV/config.js"></script><script type="text/javascript" crossorigin="anonymous" src="https://d3golvu0vykca8.cloudfront.net/static/dead-clicks-autocapture.js?v=1.203.2"></script><script type="text/javascript" crossorigin="anonymous" src="https://d3golvu0vykca8.cloudfront.net/static/dead-clicks-autocapture.js?v=1.203.2"></script></body></html>
