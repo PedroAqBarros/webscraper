@@ -1,3 +1,5 @@
+--- START OF FILE background.js ---
+```javascript
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "scrape") {
         chrome.scripting.executeScript({

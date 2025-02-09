@@ -1,21 +1,16 @@
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.selector) {
-        document.getElementById('selector').value = request.selector;
-    }
-    //Não precisa de return true, aqui, porque não tem nada assíncrono.
-});
-
-document.getElementById('clearSelection').addEventListener('click', () => {
-    //... restante do código, sem mudanças ...
-});
-
-// Injeta o script ao abrir o popup (opcional, outra forma de injeção).
-// Remova se já injeta de forma declarativa no manifest.
-/*
-chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-    chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        files: ['content.js']
-    });
-});
-*/
+--- START OF FILE popup.html ---
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seletor CSS</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Seletor CSS:</h1>
+  <input type="text" id="selector" readonly>
+  <button id="clearSelection">Limpar Seleção</button>
+  <button id="startSelection">Selecionar Elemento</button>
+  <script src="popup.js"></script>
+</body>
+</html>

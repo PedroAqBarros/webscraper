@@ -1,29 +1,32 @@
+--- START OF FILE popup.js ---
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+    // Solicita o seletor atual ao content script quando o popup é aberto
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, { action: "getSelector" }, function(response) {
+            if (response && response.selector) {
+                document.getElementById('selector').value = response.selector;
+            }
+        });
+    });
+
+    document.getElementById('clearSelection').addEventListener('click', () => {
+        document.getElementById('selector').value = '';
+        chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, { action: "clearSelection" });
+        });
+    });
+
+    document.getElementById('startSelection').addEventListener('click', () => {
+        chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, { action: "startSelection" });
+        });
+    });
+});
+
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.selector) {
+    if (request.action === "selectorUpdated") {
         document.getElementById('selector').value = request.selector;
     }
-});
-
-document.getElementById('clearSelection').addEventListener('click', () => {
-   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-       chrome.scripting.executeScript({
-           target: {tabId: tabs[0].id},
-           func: () => {
-              //Remover todos os elementos com a classe do hightlight
-              const highlighted = document.querySelectorAll('.my-highlight-class');
-              highlighted.forEach(el => el.classList.remove('my-highlight-class'));
-           }
-       });
-
-   });
-    document.getElementById('selector').value = "";
-});
-
-
-// Injeta o script ao abrir o popup (opcional, outra forma de injeção).
-chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-    chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        files: ['content.js']
-    });
 });
