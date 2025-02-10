@@ -1,26 +1,16 @@
---- START OF FILE manifest.json ---
-```json
 {
   "manifest_version": 3,
-  "name": "Seletor CSS Interativo",
-  "version": "1.0",
-  "permissions": [
-    "activeTab",
-    "storage",
-    "scripting",
-    "declarativeNetRequest" // Pode ser útil no futuro para manipulação de requests
-  ],
+  "name": "Extensao de Teste Minima",
+  "version": "0.1",
+  "description": "Extensao minima para teste",
   "action": {
     "default_popup": "popup.html"
   },
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
+  "permissions": [
+    "scripting",
+    "<all_urls>"
   ]
 }
